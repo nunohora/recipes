@@ -1,0 +1,21 @@
+{{#if results}}
+	<ul>
+	{{#each results}}
+		<li class="result-item list-group-item">
+			<div class="result-left">
+				<div class="result-title">{{attributes.recipeName}}</div>
+				<div class="ingredient-list">
+				{{#each attributes.ingredients}}
+					<span class="ingredient-name label label-success">{{this}}</span>
+				{{/each}}
+				</div>
+			</div>
+			<div class="result-right">
+				{{#each attributes.imageUrlsBySize}}
+					<img src="{{this}}" />
+				{{/each}}
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+{{/if}}
